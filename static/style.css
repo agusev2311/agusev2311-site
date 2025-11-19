@@ -1,0 +1,116 @@
+/* ----- Dark Theme ----- */
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #0b0b0f;
+  color: #e5e5e5;
+  font-family: Arial, sans-serif;
+}
+
+/* ----- Background Spin (fixed & safe) ----- */
+
+.background-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 140vw;
+  transform: translate(-50%, -50%);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.background-rotate {
+  width: 100%;
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ----- Content ----- */
+
+.content {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;               /* на всю высоту экрана */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;         /* центр по вертикали */
+  align-items: center;             /* центр по горизонтали */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+
+h1 {
+  margin-bottom: 30px;
+  color: #f1f1f1;
+  text-shadow: 0 0 10px #a855f7;
+}
+
+/* ----- Neon Buttons ----- */
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: #a855f7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.25s;
+  box-shadow: 0 0 12px #a855f7aa;
+}
+
+.btn:hover {
+  background: #9333ea;
+  box-shadow: 0 0 18px #9333ea;
+}
+
+/* ----- Footer Note ----- */
+
+.footer-note {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  z-index: 20;
+}
+
+.footer-note a {
+  color: #a855f7;
+  text-decoration: none;
+}
+
+.footer-note a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px #a855f7aa;
+}
